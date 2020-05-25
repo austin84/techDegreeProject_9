@@ -8,6 +8,7 @@
 
 body {
   width: 100%;
+  min-height: 100vh;
   position: relative;
   background-color: rgba(211, 211, 211, 0.8);
   background-size: cover;
@@ -19,8 +20,8 @@ body {
   max-width: 100%;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 70px 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 70px 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 70px 90vh auto auto auto auto auto;
+      grid-template-rows: 70px 90vh auto auto auto auto auto;
 }
 
 .head-top {
@@ -35,7 +36,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  padding: 0 25px;
+  padding: 0 15px;
   background-color: lightgray;
 }
 
@@ -55,17 +56,123 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .logo img {
-  height: 40px;
+  height: 30px;
+}
+
+.title {
+  font-size: 0.7em;
+  width: auto;
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.menu-btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  margin-right: 15px;
+}
+
+.menu-btn-burger {
+  width: 18.75px;
+  height: 2px;
+  background: black;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+  content: '';
+  position: absolute;
+  width: 18.75px;
+  height: 2px;
+  background: black;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn-burger::before {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+.menu-btn-burger::after {
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+.menu-btn.open .menu-btn-burger {
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.menu-btn.open .menu-btn-burger::before {
+  -webkit-transform: rotate(45deg) translate(10.5px, -10.5px);
+          transform: rotate(45deg) translate(10.5px, -10.5px);
+}
+
+.menu-btn.open .menu-btn-burger::after {
+  -webkit-transform: rotate(-45deg) translate(10.5px, 10.5px);
+          transform: rotate(-45deg) translate(10.5px, 10.5px);
+}
+
+.nav-container {
+  display: none;
 }
 
 .headboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-row: 2;
   grid-row: 2;
   background: url(../img/x-large1.jpg) no-repeat center center fixed;
   background-size: cover;
+  color: whitesmoke;
+  font-size: 6em;
+}
+
+.down-arrow {
+  -webkit-transform: translateY(210px);
+          transform: translateY(210px);
 }
 
 .nav-container,
@@ -75,5 +182,30 @@ header {
 .contact-resources,
 .footer {
   background-color: rgba(211, 211, 211, 0.8);
+}
+
+.about {
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+.portfolio {
+  -ms-grid-row: 4;
+  grid-row: 4;
+}
+
+.contact-form {
+  -ms-grid-row: 5;
+  grid-row: 5;
+}
+
+.contact-resources {
+  -ms-grid-row: 6;
+  grid-row: 6;
+}
+
+.footer {
+  -ms-grid-row: 7;
+  grid-row: 7;
 }
 /*# sourceMappingURL=main.css.map */
