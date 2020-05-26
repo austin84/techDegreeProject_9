@@ -134,8 +134,9 @@ header {
   grid-row: 2;
   background: url(../img/x-large1.jpg) no-repeat center center fixed;
   background-size: cover;
-  color: whitesmoke;
+  color: coral;
   font-size: 6em;
+  font-family: 'Michroma', sans-serif;
 }
 .down-arrow {
   transform: translateY(210px);
@@ -167,4 +168,7 @@ header {
 }
 .footer {
   grid-row: 7;
+}
+
+@media (min-width: 640px) {
 }
