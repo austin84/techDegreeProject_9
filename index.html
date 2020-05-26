@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Dosis:wght@500&family=Michroma&display=swap"
       rel="stylesheet"
     />
 
@@ -17,7 +17,7 @@
       <header class="header">
         <div class="head-top">
           <div class="logo"><img src="img/logo.png" alt="" /></div>
-          <div class="title">Austin Veatch / Digital Producer</div>
+          <div class="title">Austin Veatch \ Digital Producer</div>
           <div class="menu-btn">
             <div class="menu-btn-burger"></div>
           </div>
@@ -41,7 +41,8 @@
       <!-- /NAV -->
       <!-- About -->
       <section class="about" id="about">
-        <h3>About</h3>
+        <h3>ABOUT</h3>
+        <img src="img/avatar.jpg" alt="photo of austin" />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum magnam
           hic laboriosam repellendus doloremque id quas cumque tenetur earum
@@ -71,6 +72,7 @@
       <!-- Portfolio -->
       <section class="portfolio" id="portfolio">
         <!-- Grid Setup for images on left and links on right -->
+        <h3>PORTFOLIO</h3>
         <div class="port-1">
           <img src="img/small1.jpg" alt="project one" />
           <p>
@@ -116,30 +118,40 @@
       <!-- Form -->
       <section class="contact-form" id="contact">
         <form action="#">
-          <label for="first-name">First Name</label>
-          <input type="text" name="first-name" id="first-name" required />
+          <fieldset>
+            <legend>Contact Austin</legend>
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name" required />
 
-          <label for="last-name">Last Name</label>
-          <input type="text" name="last-name" id="last-name" required />
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name" required />
 
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" required />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
 
-          <label for="textarea">Message</label>
-          <input type="text" name="message" id="message" required />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="8" cols="50"></textarea>
 
-          <button id="submit" type="submit">Send</button>
+            <button id="submit" type="submit">Send Message</button>
+          </fieldset>
         </form>
       </section>
       <!-- /Form -->
       <!-- Social -->
       <section class="contact-resources">
         <!-- icons and links for avenues of contact -->
-        <div class="foo"><p>Social</p></div>
-        <div class="foo"><p>Social</p></div>
-        <div class="foo"><p>Social</p></div>
-        <div class="foo"><p>Social</p></div>
-        <div class="foo"><p>Social</p></div>
+        <div class="foo">
+          <p>icon</p>
+          <p>GitHub</p>
+        </div>
+        <div class="foo">
+          <p>icon</p>
+          <p>Twitter</p>
+        </div>
+        <div class="foo">
+          <p>icon</p>
+          <p>LinedIn</p>
+        </div>
       </section>
       <!-- /Social -->
     </div>

@@ -1,3 +1,9 @@
+// Variables //
+$-font-titles: 'DM Mono', monospace;
+$-font-text: 'Dosis', sans-serif;
+$-font-arrow: 'Michroma', sans-serif;
+
+$-box-shadow: 0 4px 6px rgba(255, 101, 47, 0.2);
 // Base Styles //
 
 * {
@@ -23,17 +29,15 @@ body {
   max-width: 100%;
   grid-template-columns: 1fr;
   grid-template-rows: 70px 90vh auto auto auto auto auto;
+  grid-template-areas:
+    'header'
+    'headboard'
+    'about'
+    'portfolio'
+    'contact-form'
+    'contact-resources'
+    'footer';
 }
-
-// ! Working on placing grid items into their rows, ive only done row two
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
 
 .head-top {
   display: flex;
@@ -48,7 +52,9 @@ body {
 header {
   position: sticky;
   top: 0;
-  grid-row: 1;
+  grid-area: header;
+  font-family: $-font-text;
+  z-index: 10;
 }
 
 .logo {
@@ -129,17 +135,17 @@ header {
 .headboard {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  grid-row: 2;
+  grid-area: headboard;
   background: url(../img/x-large1.jpg) no-repeat center center fixed;
   background-size: cover;
-  color: coral;
+  color: rgb(255, 101, 47);
   font-size: 6em;
-  font-family: 'Michroma', sans-serif;
+  font-family: $-font-arrow;
 }
 .down-arrow {
-  transform: translateY(210px);
+  // transform: translateY(210px);
 }
 
 .nav-container,
@@ -152,22 +158,155 @@ header {
 }
 
 .about {
-  grid-row: 3;
+  grid-area: about;
+  padding: 15px;
+  font-size: 0.8em;
+  h3 {
+    font-family: $-font-titles;
+    text-align: center;
+    font-size: 2em;
+    transform: translateX(-26%);
+  }
+  p {
+    font-family: $-font-text;
+  }
+  img {
+    border-radius: 50%;
+    width: 150px;
+    margin: 0 10px 10px 0;
+    float: left;
+    shape-outside: circle(50%);
+    transition: all 1s 0.2s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 }
 
 .portfolio {
-  grid-row: 4;
+  grid-area: portfolio;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 35px;
+  font-family: $-font-text;
+  font-size: 0.7em;
+  h3 {
+    font-family: $-font-titles;
+    text-align: center;
+    font-size: 2em;
+    transform: translateX(20%);
+  }
+  img {
+    width: 30%;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: $-box-shadow;
+  }
+  div {
+    display: flex;
+    width: 90%;
+    padding: 15px;
+  }
+  .port-1,
+  .port-2,
+  .port-3,
+  .port-4 {
+    border-bottom: 1px solid rgba(255, 101, 47, 0.2);
+  }
 }
 
 .contact-form {
-  grid-row: 5;
+  grid-area: contact-form;
+  form {
+    display: flex;
+    fieldset {
+      width: 100%;
+      border-radius: 5px;
+      border: 2px solid rgba(255, 101, 47, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: $-font-titles;
+      border: none;
+    }
+    legend {
+      margin: 0 auto 0 15%;
+      font-size: 1.2em;
+    }
+
+    input,
+    textarea {
+      width: 90%;
+      padding: 5px;
+      margin: 0 auto;
+      outline: none;
+      border-style: none;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(255, 101, 47, 0.2);
+      transition: all 80ms ease-in-out;
+      &:focus {
+        box-shadow: inset 0 4px 10px rgba(255, 101, 47, 0.2);
+      }
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+    label {
+      align-self: flex-start;
+      margin: 10px auto 10px 5%;
+    }
+    button {
+      width: 30%;
+      padding: 5px;
+      margin: 25px auto 35px 22%;
+      font-size: 0.9em;
+      font-family: $-font-text;
+      border-radius: 5px;
+      outline: none;
+      background-color: rgb(133, 187, 187);
+      box-shadow: $-box-shadow;
+      transition: scale 80ms ease-in-out;
+      &:hover {
+        transform: scale(1.03);
+        box-shadow: inset 0 4px 6px rgba(255, 101, 47, 0.2);
+        opacity: 0.9;
+      }
+      &:active {
+        transform: scale(0.97);
+      }
+    }
+  }
 }
 
 .contact-resources {
-  grid-row: 6;
+  grid-area: contact-resources;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  margin: 45px 0 15px;
+  div {
+    display: flex;
+    width: 80%;
+    height: 85px;
+    justify-content: space-around;
+    padding: 15px 0;
+  }
 }
 .footer {
-  grid-row: 7;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 0.7em;
+  p {
+    margin: 0 auto 0 8%;
+  }
 }
 
 @media (min-width: 640px) {
