@@ -8,10 +8,16 @@
 
 body {
   width: 100%;
+  min-width: 320px;
   min-height: 100vh;
   position: relative;
-  background-color: rgba(211, 211, 211, 0.8);
+  background-color: lightgray;
   background-size: cover;
+  color: rgba(102, 101, 101, 0.6);
+}
+
+h3 {
+  color: rgba(102, 101, 101, 0.8);
 }
 
 .grid-container {
@@ -38,7 +44,8 @@ body {
           justify-content: space-between;
   width: 100%;
   padding: 0 15px;
-  background-color: lightgray;
+  background: -webkit-gradient(linear, left top, left bottom, from(lightgray), to(transparent));
+  background: linear-gradient(lightgray, transparent);
 }
 
 header {
@@ -50,6 +57,7 @@ header {
   grid-area: header;
   font-family: "Dosis", sans-serif;
   z-index: 10;
+  color: rgba(65, 56, 56, 0.8);
 }
 
 .logo {
@@ -70,8 +78,8 @@ header {
 }
 
 .title {
-  font-size: 0.7em;
-  width: auto;
+  font-size: 0.85em;
+  max-width: 30%;
   margin-left: auto;
   margin-right: 25px;
 }
@@ -106,8 +114,7 @@ header {
   transition: all 0.5s ease-in-out;
 }
 
-.menu-btn-burger::before,
-.menu-btn-burger::after {
+.menu-btn-burger::before, .menu-btn-burger::after {
   content: '';
   position: absolute;
   width: 18.75px;
@@ -169,7 +176,8 @@ header {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: headboard;
-  background: url(../img/x-large1.jpg) no-repeat center center fixed;
+  background: -webkit-gradient(linear, left top, left bottom, from(lightgray), color-stop(transparent), to(lightgray)), url(https://source.unsplash.com/random/3000x2000) no-repeat center center fixed;
+  background: linear-gradient(lightgray, transparent, lightgray), url(https://source.unsplash.com/random/3000x2000) no-repeat center center fixed;
   background-size: cover;
   color: #ff652f;
   font-size: 6em;
@@ -182,15 +190,15 @@ header {
 .contact-form,
 .contact-resources,
 .footer {
-  background-color: rgba(211, 211, 211, 0.8);
+  background-color: lightgray;
 }
 
 .about {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: about;
-  padding: 15px;
-  font-size: 0.8em;
+  padding: 150px 15px 0;
+  font-size: 1em;
 }
 
 .about h3 {
@@ -199,6 +207,7 @@ header {
   font-size: 2em;
   -webkit-transform: translateX(-26%);
           transform: translateX(-26%);
+  margin-bottom: 40px;
 }
 
 .about p {
@@ -221,62 +230,109 @@ header {
 }
 
 .portfolio {
+  position: relative;
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: portfolio;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-bottom: 35px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: 'port-1' 'port-2' 'port-3' 'port-4' 'port-5' 'port-6';
+  padding: 150px 15px 35px;
   font-family: "Dosis", sans-serif;
-  font-size: 0.7em;
+  font-size: 1em;
 }
 
 .portfolio h3 {
+  position: absolute;
+  top: 50px;
+  right: 40%;
   font-family: "DM Mono", monospace;
   text-align: center;
   font-size: 2em;
-  -webkit-transform: translateX(20%);
-          transform: translateX(20%);
+  margin-bottom: 40px;
 }
 
 .portfolio img {
-  width: 30%;
+  height: auto;
+  width: 50%;
   margin-right: 10px;
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 6px rgba(255, 101, 47, 0.2);
           box-shadow: 0 4px 6px rgba(255, 101, 47, 0.2);
 }
 
-.portfolio div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 90%;
-  padding: 15px;
+.portfolio .port-1,
+.portfolio .port-2,
+.portfolio .port-3,
+.portfolio .port-4,
+.portfolio .port-5 {
+  border-bottom: 1px solid rgba(255, 101, 47, 0.2);
 }
 
 .portfolio .port-1,
 .portfolio .port-2,
 .portfolio .port-3,
-.portfolio .port-4 {
-  border-bottom: 1px solid rgba(255, 101, 47, 0.2);
+.portfolio .port-4,
+.portfolio .port-5,
+.portfolio .port-6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+}
+
+.port-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: port-1;
+}
+
+.port-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: port-2;
+}
+
+.port-3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: port-3;
+}
+
+.port-4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: port-4;
+}
+
+.port-5 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: port-5;
+}
+
+.port-6 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: port-6;
 }
 
 .contact-form {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: contact-form;
+  padding: 75px 15px 25px;
+  max-width: 500px;
 }
 
 .contact-form form {
@@ -287,8 +343,8 @@ header {
 
 .contact-form form fieldset {
   width: 100%;
-  border-radius: 5px;
-  border: 2px solid rgba(255, 101, 47, 0.2);
+  border: none;
+  border-top: 2px solid rgba(255, 101, 47, 0.2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,11 +359,11 @@ header {
       -ms-flex-align: center;
           align-items: center;
   font-family: "DM Mono", monospace;
-  border: none;
 }
 
 .contact-form form legend {
-  margin: 0 auto 0 15%;
+  margin: 0 auto 30px 15%;
+  padding: 0 5px;
   font-size: 1.2em;
 }
 
@@ -331,12 +387,6 @@ header {
           box-shadow: inset 0 4px 10px rgba(255, 101, 47, 0.2);
 }
 
-.contact-form form input:hover,
-.contact-form form textarea:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-}
-
 .contact-form form label {
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -358,14 +408,6 @@ header {
   transition: scale 80ms ease-in-out;
 }
 
-.contact-form form button:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-  -webkit-box-shadow: inset 0 4px 6px rgba(255, 101, 47, 0.2);
-          box-shadow: inset 0 4px 6px rgba(255, 101, 47, 0.2);
-  opacity: 0.9;
-}
-
 .contact-form form button:active {
   -webkit-transform: scale(0.97);
           transform: scale(0.97);
@@ -383,11 +425,15 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  justify-self: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 45px 0 15px;
+  padding: 25px 0 35px;
+  font-family: "DM Mono", monospace;
 }
 
 .contact-resources div {
@@ -395,10 +441,32 @@ header {
   display: -ms-flexbox;
   display: flex;
   width: 80%;
-  height: 85px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 15px 0;
+}
+
+.contact-resources a {
+  text-decoration: none;
+  font-size: 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(102, 101, 101, 0.8);
+}
+
+.contact-resources a:visited {
+  color: rgba(102, 101, 101, 0.8);
+}
+
+.icon {
+  font-size: 2.5em;
+  margin-right: 15px;
+  color: #85bbbb;
 }
 
 .footer {
@@ -420,5 +488,100 @@ header {
 
 .footer p {
   margin: 0 auto 0 8%;
+}
+
+.hidden {
+  display: none;
+  grid-area: hidden;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 70px 90vh auto auto auto auto auto;
+        grid-template-rows: 70px 90vh auto auto auto auto auto;
+        grid-template-areas: 'header header' 'headboard headboard' 'about about' 'portfolio portfolio' 'contact-form hidden' 'contact-resources contact-resources' 'footer footer';
+  }
+  .hidden {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1.2em;
+  }
+  .hidden p {
+    width: 66%;
+  }
+  .contact-resources {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 924px) {
+  header {
+    font-size: 1.7em;
+  }
+  header .logo {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    margin-left: 25px;
+  }
+  .menu-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .menu-btn-burger {
+    width: 30px;
+    height: 3px;
+    -webkit-box-shadow: 0 5px 8px rgba(255, 101, 47, 0.2);
+            box-shadow: 0 5px 8px rgba(255, 101, 47, 0.2);
+  }
+  .menu-btn-burger::before, .menu-btn-burger::after {
+    width: 30px;
+    height: 3px;
+    -webkit-box-shadow: 0 5px 8px rgba(255, 101, 47, 0.2);
+            box-shadow: 0 5px 8px rgba(255, 101, 47, 0.2);
+  }
+  .menu-btn-burger::before {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  .menu-btn-burger::after {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  .grid-container {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 90px 90vh auto auto auto auto;
+        grid-template-rows: 90px 90vh auto auto auto auto;
+        grid-template-areas: 'header header header' 'headboard headboard headboard' 'about about about' 'portfolio portfolio portfolio' 'contact-form contact-resources hidden' '. . footer';
+  }
+  .portfolio {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 'port-1 port-2' 'port-3 port-4' 'port-5 port-6';
+  }
+  .portfolio div:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .portfolio img {
+    max-height: 300px;
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

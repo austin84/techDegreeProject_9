@@ -9,6 +9,10 @@
     />
 
     <link rel="stylesheet" href="css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/7f77c35516.js"
+      crossorigin="anonymous"
+    ></script>
     <title>The Digital Produce of Austin Veatch</title>
   </head>
   <body class="body">
@@ -17,7 +21,9 @@
       <header class="header">
         <div class="head-top">
           <div class="logo"><img src="img/logo.png" alt="" /></div>
-          <div class="title">Austin Veatch \ Digital Producer</div>
+          <div class="title">
+            <p>Austin Veatch <strong>/</strong> Digital Producer</p>
+          </div>
           <div class="menu-btn">
             <div class="menu-btn-burger"></div>
           </div>
@@ -25,7 +31,7 @@
       </header>
       <div class="headboard">
         <h1 class="main-title"></h1>
-        <p data-lax-opacity="0 1, vh 0" class="down-arrow lax">V</p>
+        <p data-lax-opacity="0 1, vh 0" class="down-arrow lax" id="arrow">V</p>
         <!-- big background image with opacity gradiant-->
       </div>
       <!-- NAV -->
@@ -73,40 +79,66 @@
       <section class="portfolio" id="portfolio">
         <!-- Grid Setup for images on left and links on right -->
         <h3>PORTFOLIO</h3>
-        <div class="port-1">
-          <img src="img/small1.jpg" alt="project one" />
+        <div class="port-1 lax">
+          <img
+            src="https://source.unsplash.com/random/480x641"
+            alt="project one"
+          />
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
             ad quisquam sequi libero sit maiores incidunt commodi placeat.
             Assumenda, dolores!
           </p>
         </div>
-        <div class="port-2">
-          <img src="img/small2.jpg" alt="project two" />
+        <div class="port-2 lax" data-lax-translate-x="500 0, 1000 1">
+          <img
+            src="https://source.unsplash.com/random/480x642"
+            alt="project two"
+          />
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
             ad quisquam sequi libero sit maiores incidunt commodi placeat.
             Assumenda, dolores!
           </p>
         </div>
-        <div class="port-3">
-          <img src="img/small3.jpg" alt="project three" />
+        <div class="port-3 lax">
+          <img
+            src="https://source.unsplash.com/random/480x640"
+            alt="project three"
+          />
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
             ad quisquam sequi libero sit maiores incidunt commodi placeat.
             Assumenda, dolores!
           </p>
         </div>
-        <div class="port-4">
-          <img src="img/small4.jpg" alt="project four" />
+        <div class="port-4 lax" data-lax-translate-x="rightToLeft">
+          <img
+            src="https://source.unsplash.com/random/479x640"
+            alt="project four"
+          />
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
             ad quisquam sequi libero sit maiores incidunt commodi placeat.
             Assumenda, dolores!
           </p>
         </div>
-        <div class="port-5">
-          <img src="img/small5.jpg" alt="project five" />
+        <div class="port-5 lax">
+          <img
+            src="https://source.unsplash.com/random/481x640"
+            alt="project five"
+          />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+            ad quisquam sequi libero sit maiores incidunt commodi placeat.
+            Assumenda, dolores!
+          </p>
+        </div>
+        <div class="port-6 lax" data-lax-translate-x="rightToLeft">
+          <img
+            src="https://source.unsplash.com/random/482x640"
+            alt="project six"
+          />
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
             ad quisquam sequi libero sit maiores incidunt commodi placeat.
@@ -120,16 +152,16 @@
         <form action="#">
           <fieldset>
             <legend>Contact Austin</legend>
-            <label for="first-name">First Name</label>
-            <input type="text" name="first-name" id="first-name" required />
+            <label for="name">name.</label>
+            <input type="text" name="name" id="name" required />
 
-            <label for="last-name">Last Name</label>
-            <input type="text" name="last-name" id="last-name" required />
+            <label for="company">company.</label>
+            <input type="text" name="company" id="company" required />
 
-            <label for="email">Email</label>
+            <label for="email">email.</label>
             <input type="email" name="email" id="email" required />
 
-            <label for="message">Message</label>
+            <label for="message">message.</label>
             <textarea id="message" name="message" rows="8" cols="50"></textarea>
 
             <button id="submit" type="submit">Send Message</button>
@@ -140,24 +172,39 @@
       <!-- Social -->
       <section class="contact-resources">
         <!-- icons and links for avenues of contact -->
-        <div class="foo">
-          <p>icon</p>
-          <p>GitHub</p>
+        <div class="github">
+          <a href="http://www.github.com/austin84" target="_blank">
+            <i class="fab fa-github icon"></i>
+            <p>GitHub</p>
+          </a>
         </div>
-        <div class="foo">
-          <p>icon</p>
-          <p>Twitter</p>
+        <div class="twitter">
+          <a href="http://www.twitter.com/VeatchAustin" target="_blank">
+            <i class="fab fa-twitter icon"></i>
+            <p>Twitter</p>
+          </a>
         </div>
-        <div class="foo">
-          <p>icon</p>
-          <p>LinedIn</p>
+        <div class="linkedin">
+          <a href="http://www.linkedin.com/in/austinveatch" target="_blank">
+            <i class="fab fa-linkedin-in icon"></i>
+            <p>LinedIn</p>
+          </a>
         </div>
       </section>
       <!-- /Social -->
+      <div class="hidden">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident
+          eaque tenetur, exercitationem porro sapiente nihil ea pariatur, eos
+          itaque voluptatem voluptas doloremque eligendi beatae alias deserunt,
+          quidem perferendis officiis necessitatibus sit. Inventore, recusandae?
+          Voluptate neque sequi, vel tempore repudiandae delectus.
+        </p>
+      </div>
+      <footer class="footer">
+        <p class="copyright">&copyAustin Veatch, 2020</p>
+      </footer>
     </div>
-    <footer class="footer">
-      <p class="copyright">&copyAustin Veatch, 2020</p>
-    </footer>
     <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
     <script src="js/script.js"></script>
   </body>
