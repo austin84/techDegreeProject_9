@@ -551,11 +551,8 @@ header {
   display: block;
 }
 
-/**************************\
-  Basic Modal Styles
-\**************************/
 .modal {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-family: "Dosis", sans-serif;
 }
 
 .modal__overlay {
@@ -577,7 +574,7 @@ header {
 }
 
 .modal__container {
-  background-color: #fff;
+  background-color: lightgray;
   padding: 30px;
   max-width: 500px;
   max-height: 100vh;
@@ -605,7 +602,7 @@ header {
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.25;
-  color: #00449e;
+  color: rgba(69, 93, 129, 0.966);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -624,6 +621,10 @@ header {
   margin-bottom: 2rem;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8);
+}
+
+.modal__content img {
+  max-width: 400px;
 }
 
 .modal__btn {
