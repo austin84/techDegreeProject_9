@@ -12,22 +12,6 @@ window.onload = function () {
   window.requestAnimationFrame(updateLax);
 };
 
-// Hamburger
-
-const menuBtn = document.querySelector('.menu-btn');
-let menuOpen = false;
-menuBtn.addEventListener('click', (e) => {
-  if (!menuOpen) {
-    menuBtn.classList.add('open');
-    menuOpen = true;
-  } else {
-    menuBtn.classList.remove('open');
-    menuOpen = false;
-  }
-});
-
-// !  Working on LAX sliding the portfolio!!!!
-
 /**
  *
  * @param {element} target - landing for smoothscroll event
@@ -65,3 +49,47 @@ const arrow = document.querySelector('#arrow');
 arrow.addEventListener('click', (e) => {
   smoothScroll('.about', 1400);
 });
+
+// dropdown
+// Hamburger
+
+function dropdown() {
+  document.getElementById('myDropdown').classList.toggle('show');
+}
+
+const dropBtn = document.querySelector('.drop-btn');
+const dropDown = document.querySelector('.dropdown-content');
+let menuOpen = false;
+let dropdownShown = false;
+dropBtn.addEventListener('click', (e) => {
+  if (!menuOpen && !dropdownShown) {
+    dropBtn.classList.add('open');
+    dropDown.classList.add('show');
+    menuOpen = true;
+    dropdownShown = true;
+  } else {
+    dropBtn.classList.remove('open');
+    dropDown.classList.remove('show');
+    menuOpen = false;
+    dropdownShown = false;
+  }
+});
+
+// close dropdown on clickoff
+window.onclick = function (event) {
+  if (!event.target.matches('.drop-btn')) {
+    var dropdowns = document.getElementsByClassName('dropdown-content');
+    for (let i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+    const opens = document.getElementsByClassName('open');
+    if (opens.length > 0) {
+      for (let i = 0; i < opens.length; i++) {
+        opens[i].classList.toggle('open');
+      }
+    }
+  }
+};
