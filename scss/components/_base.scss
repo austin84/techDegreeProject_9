@@ -1,0 +1,30 @@
+// Base Styles //
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  position: relative;
+  background-color: $-background-color;
+  background-size: cover;
+  color: $-font-text-color;
+}
+h3 {
+  color: $-font-titles-color;
+}
+
+.nav-container,
+.about,
+.portfolio,
+.contact-form,
+.contact-resources,
+.footer {
+  background-color: $-background-color;
+}

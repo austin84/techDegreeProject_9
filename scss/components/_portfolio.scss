@@ -1,0 +1,70 @@
+.portfolio {
+  position: relative;
+  grid-area: portfolio;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'port-1'
+    'port-2'
+    'port-3'
+    'port-4'
+    'port-5'
+    'port-6';
+  padding: 150px 15px 35px;
+  font-family: $-font-text;
+  font-size: 1em;
+  h3 {
+    position: absolute;
+    top: 50px;
+    right: 40%;
+    font-family: $-font-titles;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
+  img {
+    height: auto;
+    width: 50%;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px $-box-shadow-color;
+  }
+
+  .port-1,
+  .port-2,
+  .port-3,
+  .port-4,
+  .port-5 {
+    border-bottom: 1px solid $-box-shadow-color;
+  }
+  .port-1,
+  .port-2,
+  .port-3,
+  .port-4,
+  .port-5,
+  .port-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  }
+}
+.port-1 {
+  grid-area: port-1;
+}
+.port-2 {
+  grid-area: port-2;
+}
+.port-3 {
+  grid-area: port-3;
+}
+.port-4 {
+  grid-area: port-4;
+}
+.port-5 {
+  grid-area: port-5;
+}
+.port-6 {
+  grid-area: port-6;
+}

@@ -1,0 +1,16 @@
+// Grid //
+
+.grid-container {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 90vh auto auto auto auto auto;
+  grid-template-areas:
+    'header'
+    'headboard'
+    'about'
+    'portfolio'
+    'contact-form'
+    'contact-resources'
+    'footer';
+}

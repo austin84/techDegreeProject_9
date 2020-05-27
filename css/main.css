@@ -1,3 +1,14 @@
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  max-width: 100%;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 70px 90vh auto auto auto auto auto;
+      grid-template-rows: 70px 90vh auto auto auto auto auto;
+      grid-template-areas: 'header' 'headboard' 'about' 'portfolio' 'contact-form' 'contact-resources' 'footer';
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,15 +31,13 @@ h3 {
   color: rgba(102, 101, 101, 0.8);
 }
 
-.grid-container {
-  display: -ms-grid;
-  display: grid;
-  max-width: 100%;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 70px 90vh auto auto auto auto auto;
-      grid-template-rows: 70px 90vh auto auto auto auto auto;
-      grid-template-areas: 'header' 'headboard' 'about' 'portfolio' 'contact-form' 'contact-resources' 'footer';
+.nav-container,
+.about,
+.portfolio,
+.contact-form,
+.contact-resources,
+.footer {
+  background-color: lightgray;
 }
 
 .head-top {
@@ -57,7 +66,7 @@ header {
   grid-area: header;
   font-family: "Dosis", sans-serif;
   z-index: 10;
-  color: rgba(65, 56, 56, 0.8);
+  color: rgba(102, 101, 101, 0.8);
 }
 
 .logo {
@@ -108,8 +117,8 @@ header {
   height: 2px;
   background: black;
   border-radius: 5px;
-  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-          box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-box-shadow: 0 2px 3px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 2px 3px rgba(255, 101, 47, 0.2);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -121,8 +130,8 @@ header {
   height: 2px;
   background: black;
   border-radius: 5px;
-  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-          box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-box-shadow: 0 2px 3px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 2px 3px rgba(255, 101, 47, 0.2);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -184,13 +193,11 @@ header {
   font-family: "Michroma", sans-serif;
 }
 
-.nav-container,
-.about,
-.portfolio,
-.contact-form,
-.contact-resources,
-.footer {
-  background-color: lightgray;
+#arrow:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: default;
+  color: rgba(69, 93, 129, 0.966);
 }
 
 .about {
@@ -413,6 +420,11 @@ header {
           transform: scale(0.97);
 }
 
+.thankyou_message {
+  font-family: "DM Mono", monospace;
+  color: rgba(158, 63, 63, 0.8);
+}
+
 .contact-resources {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
@@ -524,6 +536,21 @@ header {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .contact-resources p {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  .contact-resources svg {
+    margin-right: 5px;
+  }
+}
+
+.linkedin p {
+  margin-right: 0;
+}
+
+.twitter svg {
+  margin-right: 0;
 }
 
 @media (min-width: 924px) {
@@ -582,6 +609,9 @@ header {
   .portfolio img {
     max-height: 300px;
     width: 50%;
+  }
+  .portfolio .port-6 {
+    border-bottom: 1px solid rgba(255, 101, 47, 0.2);
   }
 }
 /*# sourceMappingURL=main.css.map */
