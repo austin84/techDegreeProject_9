@@ -108,6 +108,7 @@ header {
 }
 
 #arrow {
+  opacity: 0.5;
   &:hover {
     transform: scale(1.1);
     cursor: default;

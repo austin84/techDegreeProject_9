@@ -26,6 +26,7 @@
       padding: 5px;
       margin: 0 auto;
       outline: none;
+      background-color: $-background-color-lighter;
       border-style: none;
       border-radius: 5px;
       box-shadow: 0 2px 10px $-box-shadow-color;
@@ -58,6 +59,25 @@
 }
 
 .thankyou_message {
-  font-family: $-font-titles;
-  color: rgba(158, 63, 63, 0.8);
+  font-size: 1.2em;
+  font-family: $-font-text;
+  line-height: 2;
+  color: $-arrow-color;
+
+  min-height: 500px;
+  min-width: 280px;
+  .thanks {
+    margin: 50% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $-background-color-lighter;
+    box-shadow: 0 3px 3px $-box-shadow-color;
+    height: 30%;
+    border: 1px solid $-box-shadow-color;
+    border-radius: 5px;
+  }
+  p {
+    width: 85%;
+  }
 }

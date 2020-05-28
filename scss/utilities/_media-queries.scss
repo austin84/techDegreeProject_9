@@ -20,11 +20,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2em;
+    font-size: 1em;
+    font-family: $-font-text;
+    line-height: 1.5;
+    color: $-arrow-color;
+    padding: 0 15px 25px;
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $-background-color-lighter;
+      box-shadow: 0 2px 10px $-box-shadow-color;
+      height: 70%;
+      border: 1px solid $-box-shadow-color;
+      border-radius: 5px;
+    }
     p {
-      width: 66%;
+      width: 85%;
     }
   }
+
   .contact-resources {
     flex-direction: row;
     p {
@@ -112,5 +127,14 @@
     .port-6 {
       border-bottom: 1px solid $-box-shadow-color;
     }
+  }
+  .contact-message {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-message {
+    font-size: 1.1em;
   }
 }

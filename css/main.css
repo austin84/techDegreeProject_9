@@ -64,7 +64,7 @@ header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
-  font-family: "Dosis", sans-serif;
+  font-family: "Open Sans", sans-serif;
   z-index: 10;
   color: rgba(102, 101, 101, 0.8);
 }
@@ -193,6 +193,10 @@ header {
   font-family: "Michroma", sans-serif;
 }
 
+#arrow {
+  opacity: 0.5;
+}
+
 #arrow:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -245,7 +249,7 @@ header {
 }
 
 .about h3 {
-  font-family: "DM Mono", monospace;
+  font-family: "Manrope", sans-serif;
   text-align: center;
   font-size: 2em;
   -webkit-transform: translateX(-26%);
@@ -254,7 +258,7 @@ header {
 }
 
 .about p {
-  font-family: "Dosis", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .about img {
@@ -285,7 +289,7 @@ header {
       grid-template-rows: auto;
       grid-template-areas: 'port-1' 'port-2' 'port-3' 'port-4' 'port-5' 'port-6';
   padding: 150px 15px 35px;
-  font-family: "Dosis", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1em;
 }
 
@@ -293,7 +297,7 @@ header {
   position: absolute;
   top: 50px;
   right: 40%;
-  font-family: "DM Mono", monospace;
+  font-family: "Manrope", sans-serif;
   text-align: center;
   font-size: 2em;
   margin-bottom: 40px;
@@ -401,7 +405,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "DM Mono", monospace;
+  font-family: "Manrope", sans-serif;
 }
 
 .contact-form form legend {
@@ -416,6 +420,7 @@ header {
   padding: 5px;
   margin: 0 auto;
   outline: none;
+  background-color: #d6d6d6;
   border-style: none;
   border-radius: 5px;
   -webkit-box-shadow: 0 2px 10px rgba(255, 101, 47, 0.2);
@@ -442,7 +447,7 @@ header {
   padding: 5px;
   margin: 25px auto 35px 22%;
   font-size: 0.9em;
-  font-family: "Dosis", sans-serif;
+  font-family: "Open Sans", sans-serif;
   border-radius: 5px;
   outline: none;
   background-color: rgba(69, 93, 129, 0.966);
@@ -458,8 +463,35 @@ header {
 }
 
 .thankyou_message {
-  font-family: "DM Mono", monospace;
-  color: rgba(158, 63, 63, 0.8);
+  font-size: 1.2em;
+  font-family: "Open Sans", sans-serif;
+  line-height: 2;
+  color: rgba(69, 93, 129, 0.966);
+  min-height: 500px;
+  min-width: 280px;
+}
+
+.thankyou_message .thanks {
+  margin: 50% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #d6d6d6;
+  -webkit-box-shadow: 0 3px 3px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 3px 3px rgba(255, 101, 47, 0.2);
+  height: 30%;
+  border: 1px solid rgba(255, 101, 47, 0.2);
+  border-radius: 5px;
+}
+
+.thankyou_message p {
+  width: 85%;
 }
 
 .contact-resources {
@@ -482,7 +514,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 25px 0 35px;
-  font-family: "DM Mono", monospace;
+  font-family: "Manrope", sans-serif;
 }
 
 .contact-resources div {
@@ -539,7 +571,7 @@ header {
   margin: 0 auto 0 8%;
 }
 
-.hidden {
+.contact-message {
   display: none;
   grid-area: hidden;
 }
@@ -553,7 +585,7 @@ header {
 }
 
 .modal {
-  font-family: "Dosis", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .modal__overlay {
@@ -583,6 +615,8 @@ header {
   overflow-y: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-box-shadow: 0 2px 8px 0 #e7a579;
+          box-shadow: 0 2px 8px 0 #e7a579;
 }
 
 .modal__header {
@@ -601,7 +635,7 @@ header {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.7rem;
   line-height: 1.25;
   color: rgba(69, 93, 129, 0.966);
   -webkit-box-sizing: border-box;
@@ -618,6 +652,19 @@ header {
 }
 
 .modal__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
   line-height: 1.5;
@@ -626,10 +673,36 @@ header {
 
 .modal__content img {
   max-width: 400px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 6px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 4px 6px rgba(255, 101, 47, 0.2);
+  margin-bottom: 2rem;
+}
+
+.modal__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 0.875rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 150px;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
@@ -639,7 +712,7 @@ header {
   border-radius: 0.25rem;
   border-style: none;
   border-width: 0;
-  cursor: pointer;
+  cursor: default;
   -webkit-appearance: button;
   text-transform: none;
   overflow: visible;
@@ -652,19 +725,27 @@ header {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   transition: -webkit-transform 0.25s ease-out;
-  -webkit-transition: -webkit-transform 0.25s ease-out;
-  transition: transform 0.25s ease-out;
-  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.modal__btn svg {
+  color: white;
+  width: 20px;
 }
 
 .modal__btn:focus,
 .modal__btn:hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
+  -webkit-box-shadow: 0 4px 6px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 4px 6px rgba(255, 101, 47, 0.2);
+  outline: none;
 }
 
 .modal__btn-primary {
-  background-color: #00449e;
+  background-color: rgba(69, 93, 129, 0.966);
   color: #fff;
 }
 
@@ -804,10 +885,31 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-size: 1.2em;
+    font-size: 1em;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5;
+    color: rgba(69, 93, 129, 0.966);
+    padding: 0 15px 25px;
+  }
+  .contact-message div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #d6d6d6;
+    -webkit-box-shadow: 0 2px 10px rgba(255, 101, 47, 0.2);
+            box-shadow: 0 2px 10px rgba(255, 101, 47, 0.2);
+    height: 70%;
+    border: 1px solid rgba(255, 101, 47, 0.2);
+    border-radius: 5px;
   }
   .contact-message p {
-    width: 66%;
+    width: 85%;
   }
   .contact-resources {
     -webkit-box-orient: horizontal;
@@ -894,6 +996,15 @@ header {
   }
   .portfolio .port-6 {
     border-bottom: 1px solid rgba(255, 101, 47, 0.2);
+  }
+  .contact-message {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-message {
+    font-size: 1.1em;
   }
 }
 /*# sourceMappingURL=main.css.map */

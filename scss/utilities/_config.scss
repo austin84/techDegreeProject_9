@@ -1,12 +1,16 @@
 // Variables //
-$-font-titles: 'DM Mono', monospace;
+$-font-titles: 'Manrope', sans-serif;
 $-font-titles-color: rgba(102, 101, 101, 0.8);
-$-font-text: 'Dosis', sans-serif;
+$-font-text: 'Open Sans', sans-serif;
 $-font-text-color: rgba(102, 101, 101, 0.6);
 $-font-arrow: 'Michroma', sans-serif;
 
 $-background-color: rgb(211, 211, 211);
+$-background-color-lighter: lighten($-background-color, 1);
+$-background-color-darker: darken($-background-color, 20);
+
 $-arrow-color: rgba(69, 93, 129, 0.966);
+$-button-color: rgba(69, 93, 129, 0.966);
 
 $-box-shadow-color: rgba(255, 101, 47, 0.2);
 
