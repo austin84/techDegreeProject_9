@@ -185,8 +185,8 @@ header {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: headboard;
-  background: -webkit-gradient(linear, left top, left bottom, from(lightgray), color-stop(transparent), to(lightgray)), url(https://source.unsplash.com/random/3000x2000) no-repeat center center fixed;
-  background: linear-gradient(lightgray, transparent, lightgray), url(https://source.unsplash.com/random/3000x2000) no-repeat center center fixed;
+  background: -webkit-gradient(linear, left top, left bottom, from(lightgray), color-stop(transparent), to(lightgray)), url(../../img/back.jpg) no-repeat center center fixed;
+  background: linear-gradient(lightgray, transparent, lightgray), url(../../img/back.jpg) no-repeat center center fixed;
   background-size: cover;
   color: rgba(69, 93, 129, 0.966);
   font-size: 6em;
@@ -304,7 +304,6 @@ header {
 }
 
 .portfolio img {
-  height: auto;
   width: 50%;
   margin-right: 10px;
   border-radius: 5px;
