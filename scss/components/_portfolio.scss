@@ -14,6 +14,7 @@
   padding: 150px 15px 35px;
   font-family: $-font-text;
   font-size: 1em;
+  margin-bottom: 150px;
   h3 {
     position: absolute;
     top: 50px;
@@ -23,11 +24,26 @@
     font-size: 2em;
     margin-bottom: 40px;
   }
+
+  h4 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+  }
+
   img {
     width: 50%;
     margin-right: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 6px $-box-shadow-color;
+  }
+
+  .port-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
   }
 
   .port-1,
@@ -45,7 +61,7 @@
   .port-6 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 15px;
   }
 }

@@ -54,7 +54,9 @@
       <!-- About -->
       <section class="about" id="about">
         <h3>ABOUT</h3>
-        <img src="img/avatar.jpg" alt="photo of austin" />
+        <a href="http://meowmeowbeenz.com/">
+          <img src="img/avatar.jpg" target="_blank" alt="photo of austin" />
+        </a>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum magnam
           hic laboriosam repellendus doloremque id quas cumque tenetur earum
@@ -86,51 +88,71 @@
         <h3>PORTFOLIO</h3>
         <div class="port-1 lax" data-lax-preset_large="blurInOut-5">
           <img src="img/html_form.png" alt="project showcasing an html form" />
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            ad quisquam sequi libero sit maiores incidunt commodi placeat.
-            Assumenda, dolores!
-          </p>
+          <div class="port-text">
+            <h4>
+              HTML Forms
+            </h4>
+            <p>
+              A static example of a robust HTML based form.
+            </p>
+          </div>
         </div>
         <div class="port-2 lax" data-lax-preset_large="blurInOut-5">
           <img src="img/lightbox.png" alt="project two" />
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            ad quisquam sequi libero sit maiores incidunt commodi placeat.
-            Assumenda, dolores!
-          </p>
+          <div class="port-text">
+            <h4>
+              Lightbox Photo Gallery
+            </h4>
+            <p>
+              A filterable photo gallery using a scrolling modal based lightbox.
+            </p>
+          </div>
         </div>
         <div class="port-3 lax" data-lax-preset_large="blurInOut-5">
           <img src="img/wheel_of_success.png" alt="project three" />
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            ad quisquam sequi libero sit maiores incidunt commodi placeat.
-            Assumenda, dolores!
-          </p>
+          <div class="port-text">
+            <h4>
+              Wheel Of Success
+            </h4>
+            <p>
+              A fun phrase guessing app using JavaScript.
+            </p>
+          </div>
         </div>
         <div class="port-4 lax" data-lax-preset_large="blurInOut-5">
           <img src="img/responsive_graphs.png" alt="project four" />
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            ad quisquam sequi libero sit maiores incidunt commodi placeat.
-            Assumenda, dolores!
-          </p>
+          <div class="port-text">
+            <h4>
+              Dynamic Real-Time Graphs
+            </h4>
+            <p>
+              A Web App Dashboard that utilizes chart.js to update data in
+              real-time.
+            </p>
+          </div>
         </div>
         <div class="port-5 lax" data-lax-preset_large="blurInOut-5">
           <img src="img/connect-four.png" alt="project five" />
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            ad quisquam sequi libero sit maiores incidunt commodi placeat.
-            Assumenda, dolores!
-          </p>
+          <div class="port-text">
+            <h4>
+              Connect Four
+            </h4>
+            <p>
+              A fun web app based of off the classic game using JavaScript and
+              SVG's.
+            </p>
+          </div>
         </div>
         <div class="port-6 lax" data-lax-preset_large="blurInOut-5">
           <img src="img/employee_database.png" alt="project six" />
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            ad quisquam sequi libero sit maiores incidunt commodi placeat.
-            Assumenda, dolores!
-          </p>
+          <div class="port-text">
+            <h4>
+              API Fed Employee Database
+            </h4>
+            <p>
+              Real-time data fetching using the Fetch API.
+            </p>
+          </div>
         </div>
       </section>
       <!-- /Portfolio -->
@@ -214,7 +236,7 @@
         >
           <header class="modal__header">
             <h2 class="modal__title" id="modal-1-title">
-              An HTML Form
+              HTML Forms
             </h2>
             <button
               class="modal__close"
@@ -225,9 +247,10 @@
           <main class="modal__content" id="modal-1-content">
             <img src="img/html_form.png" alt="project one" />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque ad quisquam sequi libero sit maiores incidunt commodi
-              placeat. Assumenda, dolores!
+              This is a responsive, "mobile-first" HTML form for registering to
+              receive a newsletter. It required the use of a wide variety of
+              HTML form input types and attributes. This form demonstrates an
+              understanding of HTML forms, CSS, and Responsive design.
             </p>
           </main>
           <footer class="modal__footer">
@@ -283,9 +306,11 @@
           <main class="modal__content" id="modal-2-content">
             <img src="img/lightbox.png" alt="project two" />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque ad quisquam sequi libero sit maiores incidunt commodi
-              placeat. Assumenda, dolores!
+              This is an interactive photo gallery I made using JavaScript and
+              jQuery. The thumbnails and photos are searchable and filter in
+              real-time. When the user clicks on a thumbnail, the photo displays
+              in a lightbox where they will find navigation and further info
+              about the photo.
             </p>
           </main>
           <footer class="modal__footer">
@@ -341,9 +366,12 @@
           <main class="modal__content" id="modal-3-content">
             <img src="img/wheel_of_success.png" alt="project three" />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque ad quisquam sequi libero sit maiores incidunt commodi
-              placeat. Assumenda, dolores!
+              This is a browser based app similar to 'Wheel of Fortune', a word
+              guessing game. Players click letters on an onscreen keyboard and
+              try to guess a random phrase. Using Javascript, I created an array
+              of phrases that could be chosen from randomly. The player gets to
+              choose until they solve the phrase or make five(5) incorrect
+              guesses. Give it a play.
             </p>
           </main>
           <footer class="modal__footer">
@@ -399,9 +427,11 @@
           <main class="modal__content" id="modal-4-content">
             <img src="img/responsive_graphs.png" alt="project four" />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque ad quisquam sequi libero sit maiores incidunt commodi
-              placeat. Assumenda, dolores!
+              This is a web application dashboard. It acts like a control panel
+              for interacting with a web app. This dashboard is complete with
+              JavaScript-driven charts and graphs. You can manipulate the graphs
+              in real-time with static data created ahead of time. Easily
+              connects to your favorite API.
             </p>
           </main>
           <footer class="modal__footer">
@@ -446,7 +476,7 @@
         >
           <header class="modal__header">
             <h2 class="modal__title" id="modal-5-title">
-              A Sass Based Style Guide
+              Connect Four
             </h2>
             <button
               class="modal__close"
@@ -457,9 +487,11 @@
           <main class="modal__content" id="modal-5-content">
             <img src="img/connect-four.png" alt="project five" />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque ad quisquam sequi libero sit maiores incidunt commodi
-              placeat. Assumenda, dolores!
+              This is a remake of the old classic, Connect Four! This web app
+              was made using Object Oriented JavaScript. Two(2) Players can
+              compete against eachother using just a keyboard. This game
+              demonstrates a working knowledge of Classes and Object
+              manipulation in JavaScript.
             </p>
           </main>
           <footer class="modal__footer">
@@ -509,9 +541,13 @@
           <main class="modal__content" id="modal-6-content">
             <img src="img/employee_database.png" alt="project six" />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque ad quisquam sequi libero sit maiores incidunt commodi
-              placeat. Assumenda, dolores!
+              This site uses the Random User Generator API
+              (https://randomuser.me/) to pull in data on 12 random "Employees".
+              It then uses that data to build a employee directory. The employee
+              data supplies both the employee cards and a modal that pops-up.
+              This project demonstrates a knowledge of how to retrieve data
+              utilizing the Fetch API, as well as how to handle that data when
+              returned in the form of JSON.
             </p>
           </main>
           <footer class="modal__footer">

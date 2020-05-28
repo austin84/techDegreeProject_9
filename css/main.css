@@ -248,7 +248,7 @@ header {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: about;
-  padding: 150px 15px 0;
+  padding: 350px 15px 300px;
   font-size: 1em;
 }
 
@@ -263,11 +263,16 @@ header {
 
 .about p {
   font-family: "Open Sans", sans-serif;
+  line-height: 1.75;
+}
+
+.about p:hover {
+  cursor: default;
 }
 
 .about img {
   border-radius: 50%;
-  width: 150px;
+  width: 250px;
   margin: 0 10px 10px 0;
   float: left;
   shape-outside: circle(50%);
@@ -276,8 +281,7 @@ header {
 }
 
 .about img:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  cursor: default;
 }
 
 .portfolio {
@@ -295,6 +299,7 @@ header {
   padding: 150px 15px 35px;
   font-family: "Open Sans", sans-serif;
   font-size: 1em;
+  margin-bottom: 150px;
 }
 
 .portfolio h3 {
@@ -307,12 +312,35 @@ header {
   margin-bottom: 40px;
 }
 
+.portfolio h4 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
 .portfolio img {
   width: 50%;
   margin-right: 10px;
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 6px rgba(255, 101, 47, 0.2);
           box-shadow: 0 4px 6px rgba(255, 101, 47, 0.2);
+}
+
+.portfolio .port-text {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px;
 }
 
 .portfolio .port-1,
@@ -335,9 +363,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 15px;
 }
 
@@ -671,7 +699,7 @@ header {
   margin-top: 2rem;
   margin-bottom: 2rem;
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(102, 101, 101, 0.6);
 }
 
 .modal__content img {
@@ -888,10 +916,10 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-size: 1em;
+    font-size: 1.2em;
     font-family: "Open Sans", sans-serif;
     line-height: 1.5;
-    color: rgba(69, 93, 129, 0.966);
+    color: rgba(102, 101, 101, 0.6);
     padding: 0 15px 25px;
   }
   .contact-message div {
@@ -987,7 +1015,7 @@ header {
         grid-template-rows: auto;
         grid-template-areas: 'port-1 port-2' 'port-3 port-4' 'port-5 port-6';
   }
-  .portfolio div:nth-child(even) {
+  .portfolio .lax:nth-child(even) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -1007,7 +1035,7 @@ header {
 
 @media (min-width: 1024px) {
   .contact-message {
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
 }
 /*# sourceMappingURL=main.css.map */
