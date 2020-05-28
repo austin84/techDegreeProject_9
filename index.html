@@ -21,7 +21,10 @@
         <div class="head-top">
           <div class="logo"><img src="img/logo.png" alt="" /></div>
           <div class="title">
-            <p>Austin Veatch <strong>/</strong> Digital Producer</p>
+            <p>
+              <span>Austin Veatch </span><strong>/</strong
+              ><span> Digital Producer</span>
+            </p>
           </div>
           <div class="menu-btn dropdown drop-btn">
             <div class="menu-btn-burger"></div>
@@ -35,6 +38,8 @@
           </div>
         </div>
       </header>
+      <!-- /Header -->
+      <!-- Headboard -->
       <div class="headboard">
         <h1 class="main-title"></h1>
         <p
@@ -45,7 +50,7 @@
           V
         </p>
       </div>
-      <!-- /header -->
+      <!-- /Headboard -->
       <!-- About -->
       <section class="about" id="about">
         <h3>ABOUT</h3>
@@ -78,7 +83,6 @@
       <!-- /About -->
       <!-- Portfolio -->
       <section class="portfolio" id="portfolio">
-        <!-- Grid Setup for images on left and links on right -->
         <h3>PORTFOLIO</h3>
         <div class="port-1 lax" data-lax-preset_large="blurInOut-5">
           <img src="img/html_form.png" alt="project showcasing an html form" />
@@ -129,7 +133,6 @@
           </p>
         </div>
       </section>
-
       <!-- /Portfolio -->
       <!-- Form -->
       <section class="contact-form" id="contact">
@@ -142,23 +145,18 @@
             <legend>Contact Austin</legend>
             <label for="name">name.</label>
             <input type="text" name="name" id="name" required />
-
             <label for="company">company.</label>
             <input type="text" name="color" id="company" required />
-
             <label for="email">email.</label>
             <input type="email" name="email" id="email" required />
-
             <label for="message">message.</label>
             <textarea id="message" name="message" rows="8" cols="50"></textarea>
-
             <button id="submit" type="submit">Send Message</button>
           </fieldset>
           <div style="display: none;" class="thankyou_message">
             <div class="thanks">
               <p>
                 Thanks for reaching out.<br />
-
                 I will get back to you soon.
               </p>
             </div>
@@ -168,7 +166,6 @@
       <!-- /Form -->
       <!-- Social -->
       <section class="contact-resources">
-        <!-- icons and links for avenues of contact -->
         <div class="github">
           <a href="http://www.github.com/austin84" target="_blank">
             <i class="fab fa-github icon"></i>
@@ -184,11 +181,12 @@
         <div class="linkedin">
           <a href="http://www.linkedin.com/in/austinveatch" target="_blank">
             <i class="fab fa-linkedin-in icon"></i>
-            <p>LinedIn</p>
+            <p>LinkedIn</p>
           </a>
         </div>
       </section>
       <!-- /Social -->
+      <!-- Message -->
       <div class="contact-message">
         <div>
           <p>
@@ -200,6 +198,7 @@
           </p>
         </div>
       </div>
+      <!-- /Message -->
       <footer class="footer">
         <p class="copyright">&copyAustin Veatch, 2020</p>
       </footer>
@@ -544,8 +543,8 @@
         </div>
       </div>
     </div>
-
     <!-- / Modal -->
+
     <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
     <script
       data-cfasync="false"
