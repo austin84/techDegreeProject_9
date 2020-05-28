@@ -53,10 +53,6 @@ arrow.addEventListener('click', (e) => {
 // dropdown
 // Hamburger
 
-function dropdown() {
-  document.getElementById('myDropdown').classList.toggle('show');
-}
-
 const dropBtn = document.querySelector('.drop-btn');
 const dropDown = document.querySelector('.dropdown-content');
 let menuOpen = false;
