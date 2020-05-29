@@ -249,6 +249,7 @@ header {
   -ms-grid-column: 1;
   grid-area: about;
   padding: 350px 15px 300px;
+  margin: 0 20px;
   font-size: 1em;
 }
 
@@ -263,7 +264,7 @@ header {
 
 .about p {
   font-family: "Open Sans", sans-serif;
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
 .about p:hover {
