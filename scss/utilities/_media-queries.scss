@@ -1,5 +1,8 @@
 // Media Queries
 
+@media (min-width: 600px) {
+}
+
 @media (min-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
@@ -16,6 +19,17 @@
   .about img {
     width: 200px;
   }
+  .portfolio {
+    .port-1,
+    .port-2,
+    .port-3,
+    .port-4,
+    .port-5,
+    .port-6 {
+      flex-direction: row;
+    }
+  }
+
   .contact-message {
     display: flex;
     justify-content: center;
